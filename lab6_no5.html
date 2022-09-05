@@ -1,0 +1,55 @@
+<html>
+<head><meta charest="utf-8"></head>
+<script>
+    function Addvalue(){
+        var name = document.getElementById("nameinput");
+        var address = document.getElementById("addressinput");
+        var tel = document.getElementById("telinput");
+
+        var addname = name.value;
+        var addaddress = address.value;
+        var addtel = tel.value;
+
+        let tr = document.createElement("tr");
+
+        var td1 = document.createElement("td");
+        td1.innerHTML = addname;
+        tr.appendChild(td1);
+
+        var td2= document.createElement("td");
+        td2.innerHTML = addaddress;
+        tr.appendChild(td2);
+
+        var td3 = document.createElement("td");
+        td3.innerHTML = addtel;
+        tr.appendChild(td3);
+
+        let tb= document.getElementById("tb")
+        tb.appendChild(tr);
+
+    }
+</script>
+<style>
+    table,th,td{
+        border: 1px solid black;
+    }
+</style>
+<body>
+    <form>
+        ชื่อลูกค้า :<input type="text" id="nameinput">
+        <p></p>
+        ที่อยู่ :<input type="text" id="addressinput">
+        <p></p>
+        โทรศัพท์ :<input type="text" id="telinput">
+        <p></p>
+        <input type="button" id="adddata" value="ADD" onclick="Addvalue()">
+    </form>
+    <table id="tb">
+        <tr>
+            <th>ชื่อลูกค้า</th>
+            <th>ที่อยู่</th>
+            <th>เบอร์โทรศัพท์</th>
+        </tr>
+    </table>
+</body>
+</html>
